@@ -1314,10 +1314,10 @@ print("The multi-attribute reweighing technique aimed to reduce bias across seve
 print("\nRemaining Biases:")
 print("Based on the mitigated model's fairness metrics, note any remaining disparities in predicted 'Graduate' outcomes across the protected attributes. Further mitigation or different techniques might be explored to address these.")
 
-! pip install streamlit -q
+pip install streamlit -q
 
-!pip -q install pandas numpy scikit-learn joblib streamlit pyngrok reportlab
-!sudo apt-get -q install -y nodejs npm   # for localtunnel (alternative to ngrok)
+pip -q install pandas numpy scikit-learn joblib streamlit pyngrok reportlab
+sudo apt-get -q install -y nodejs npm   # for localtunnel (alternative to ngrok)
 
 import joblib
 joblib.dump(model, 'model.pkl')
@@ -1909,7 +1909,7 @@ doc.build(story)
 
 report_path
 
-!python /mnt/data/train_model.py --data data.csv
+python /mnt/data/train_model.py --data data.csv
 
 from pyngrok import ngrok
 from google.colab import userdata
@@ -1922,7 +1922,7 @@ ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
 print("ngrok authtoken configured.")
 
-!streamlit run /mnt/data/app_streamlit.py
+streamlit run /mnt/data/app_streamlit.py
 
 import threading, time, subprocess
 import os
@@ -1949,8 +1949,3 @@ ngrok.kill()
 public_url = ngrok.connect(8501, bind_tls=True)
 
 print(f"Your Streamlit app is running at: {public_url}")
-
-!pip -q install pyngrok
-from pyngrok import ngrok
-public_url = ngrok.connect(8501, "http")  # after your app starts on 8501
-public_url
