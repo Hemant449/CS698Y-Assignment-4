@@ -1314,10 +1314,10 @@ print("The multi-attribute reweighing technique aimed to reduce bias across seve
 print("\nRemaining Biases:")
 print("Based on the mitigated model's fairness metrics, note any remaining disparities in predicted 'Graduate' outcomes across the protected attributes. Further mitigation or different techniques might be explored to address these.")
 
-pip install streamlit -q
+python -m pip install streamlit -q
 
-pip -q install pandas numpy scikit-learn joblib streamlit pyngrok reportlab
-sudo apt-get -q install -y nodejs npm   # for localtunnel (alternative to ngrok)
+python -m pip -q install pandas numpy scikit-learn joblib streamlit pyngrok reportlab
+python -m sudo apt-get -q install -y nodejs npm   # for localtunnel (alternative to ngrok)
 
 import joblib
 joblib.dump(model, 'model.pkl')
@@ -1922,7 +1922,7 @@ ngrok.set_auth_token(NGROK_AUTH_TOKEN)
 
 print("ngrok authtoken configured.")
 
-streamlit run /mnt/data/app_streamlit.py
+python -m streamlit run /mnt/data/app_streamlit.py
 
 import threading, time, subprocess
 import os
